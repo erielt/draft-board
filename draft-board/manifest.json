@@ -1,0 +1,18 @@
+{
+  "manifest_version": 2,
+  "name": "Draft Board",
+  "description": "Runs an HTTP and WebSocket server to proxy the ESPN draft application state. Displays the results in a UI.",
+  "version": "0.1",
+  "permissions": [
+    // TODO(erielt): Restrict the URL permission to the necessary URLs.
+    "<all_urls>",
+    {"socket": [
+      "tcp-connect",
+      "tcp-listen"]}],
+
+  "app": {
+    "background": {
+      "scripts": ["background.js"]
+    }
+  }
+}
